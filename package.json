@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "external-procurement-dashboard",
   "version": "2.0.0",
   "private": true,
@@ -6,7 +6,8 @@
     "dev": "next dev -p 3003",
     "build": "next build",
     "start": "next start",
-    "fetch:contracts": "node scripts/fetch-contracts.mjs"
+    "fetch:contracts": "node scripts/fetch-contracts.mjs",
+    "lint:bom": "node scripts/check-bom.mjs"
   },
   "dependencies": {
     "exceljs": "^4.4.0",

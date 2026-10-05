@@ -1,4 +1,4 @@
-﻿import { NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { buildRecommendation, linreg, type Inputs } from '../../../lib/recommend';
 import { resolveNear } from '../../../lib/iceCalendar';
 
