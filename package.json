@@ -1,11 +1,11 @@
-{
+﻿{
   "name": "external-procurement-dashboard",
   "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3003",
     "build": "next build",
-    "start": "next start -p 3003",
+    "start": "next start",
     "fetch:contracts": "node scripts/fetch-contracts.mjs"
   },
   "dependencies": {
@@ -27,5 +27,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22 <25"
+  }
 }
