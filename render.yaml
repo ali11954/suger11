@@ -1,0 +1,22 @@
+# Render blueprint for external-procurement-dashboard
+# Docs: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: sugar-procurement-dashboard
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    healthCheckPath: /
+    # Pinned so a fresh Node 25 release cannot break the build.
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      # Uploads are off: free instances have an ephemeral disk and /api/upload
+      # persists to ./data. Set to 1 only after attaching a persistent disk.
+      - key: NEXT_PUBLIC_UPLOAD_ENABLED
+        value: "0"
+    autoDeploy: true
+    autoDeployTrigger: commit

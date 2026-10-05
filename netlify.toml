@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"
+  # No `publish` line: with the Next.js runtime the adapter derives the output
+  # dir. Pointing publish at .next served it as a static folder and every
+  # /api/* route 404'd.
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# NOTE: /api/upload and the drivers cache write to ./data, which is read-only on
+# Netlify functions. See README "Deployment constraints" before relying on them.

@@ -1,0 +1,18 @@
+node_modules/
+.next/
+out/
+build/
+.env
+.env.local
+.env*.local
+npm-debug.log*
+.DS_Store
+next-env.d.ts
+
+# Runtime caches: regenerated on boot, machine-specific, and would only churn.
+data/drivers-cache.json
+data/drivers-upload.json
+
+# Test scratch
+*.tmp
+*.tsbuildinfo
